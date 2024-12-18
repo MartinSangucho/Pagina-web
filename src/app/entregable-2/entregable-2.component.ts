@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './entregable-2.component.scss'
 })
 export class Entregable2Component {
+  value: string = ''; 
   cards = [
     {
       title: 'Guitarra',

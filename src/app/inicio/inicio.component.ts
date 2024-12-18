@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class InicioComponent {
   items: any[] = [];
+  value: string = ''; 
 
   constructor() {
     this.items = [

@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class GaleriaComponent {
   images: { itemImageSrc: string; thumbnailImageSrc: string; alt: string; title: string }[] = [];
   responsiveOptions: any[] = [];
+  items: any[] = [];
 
   constructor() {
     this.images = [
@@ -97,6 +98,46 @@ export class GaleriaComponent {
       {
         breakpoint: '560px',
         numVisible: 1
+      }
+    ];
+
+    this.items = [
+      {
+        label: 'Inicio',
+        icon: 'pi pi-home',
+        routerLink: '/'
+      },
+      {
+        label: 'Tipos de Instrumentos',
+        icon: 'pi pi-tags',
+        RouterLink: '/entregable-2',
+        items: [
+          {
+            label: 'Instrumento de Cuerda',
+            icon: 'pi pi-guitar',
+            routerLink: '/entregable-2'
+          },
+          {
+            label: 'Instrumento de Cuerda Frotada',
+            icon: 'pi pi-keyboard',
+            routerLink: '/entregable-2'
+          },
+          {
+            label: 'Instrumento de Viento',
+            icon: 'pi pi-drum',
+            routerLink: '/entregable-2'
+          }
+        ]
+      },
+      {
+        label: 'Sobre Nosotros',
+        icon: 'pi pi-info-circle',
+        routerLink: '/about'
+      },
+      {
+        label: 'Contacto',
+        icon: 'pi pi-envelope',
+        routerLink: '/contacto'
       }
     ];
 

@@ -193,7 +193,10 @@
   <div class="menu-container">
     <p-menubar [model]="items"></p-menubar>
   </div>
-  
+  <input 
+    pInputText 
+    class="ng-invalid ng-dirty"
+    [(ngModel)]="value" />
   <div class="content">
     <p><strong>En Music Home</strong> llevamos la pasión por la música directamente a tus manos. Somos una tienda especializada en ofrecerte los mejores instrumentos musicales y accesorios, tanto para principiantes como para músicos profesionales.</p>
     <p><strong>🎸 ¿Buscas una guitarra que se ajuste a tu estilo?</strong> 🎹 ¿Un teclado para componer tus propias melodías? 🥁 ¿O una batería para darle ritmo a tus días?</p>

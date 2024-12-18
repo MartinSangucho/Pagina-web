@@ -143,6 +143,12 @@
       gap: 25px;
       margin-bottom: 10px;
     }
+
+    .menu-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -150,6 +156,9 @@
   <header class="header">
     <h1>Instrumentos 🎸</h1>
   </header>
+  <div class="menu-container">
+    <p-menubar [model]="items"></p-menubar>
+  </div>
   <br><br><br>
 
   <p-carousel 
