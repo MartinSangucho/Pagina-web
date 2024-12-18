@@ -1,0 +1,49 @@
+.header {
+  position: relative;
+  background-color: #000000;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden; 
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  width: 200%;
+  height: 20px; 
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  animation: slideLight 4s linear infinite;
+  z-index: 0;
+}
+
+header h1 {
+  position: relative;
+  font-size: 2.5rem;
+  z-index: 1; 
+  animation: glowEffect 3s ease-in-out infinite;
+  text-shadow: 0 0 5px #b0bec5, 0 0 10px #90a4ae, 0 0 20px #90a4ae, 
+               0 0 30px #78909c, 0 0 40px #78909c, 0 0 50px #607d8b;
+}
+
+@keyframes slideLight {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(100%);
+  }
+}
+
+@keyframes glowEffect {
+  0%, 100% {
+      text-shadow: 0 0 5px #b0bec5, 0 0 10px #90a4ae, 0 0 20px #90a4ae, 
+                   0 0 30px #78909c, 0 0 40px #78909c, 0 0 50px #607d8b;
+  }
+  50% {
+      text-shadow: 0 0 5px #cfd8dc, 0 0 10px #b0bec5, 0 0 20px #90a4ae, 
+                   0 0 30px #78909c, 0 0 40px #607d8b, 0 0 50px #546e7a;
+  }
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funcionalidad Extra</title>
+  <link rel="stylesheet" href="https://unpkg.com/primeng/resources/themes/lara-light-blue/theme.css">
+  <link rel="stylesheet" href="https://unpkg.com/primeng/resources/primeng.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/primeflex/primeflex.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4; 
+      color: #333;
+      line-height: 1.7;
+    }
+
+    .header {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+      border-bottom: 4px solid #3711df;
+    }
+
+    .header h1 {
+      font-family: 'Dancing Script', cursive; 
+      font-size: 4rem;
+      margin: 0;
+      font-style: italic; 
+      letter-spacing: 5px;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff; 
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 50px;
+      color: #1e1e1e;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      padding: 0 10px;
+    }
+
+    .box {
+      background-color: #1e1e1e;
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+      padding: 40px;
+      font-weight: bold;
+      width: 100%;
+      max-width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .click, .click-2 {
+      background-color: #a300ff;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+      margin: 0 10px;
+      font-family: 'Cinzel', serif;
+    }
+
+    .click:hover, .click-2:hover {
+      background-color: #8b00cc;
+    }
+
+    .click i, .click-2 i {
+      margin-right: 8px;
+    }
+
+    footer {
+      background-color: #1e1e1e;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #a300ff;
+    }
+
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 10px;
+    }
+
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h1> Funcionalidad Extra </h1>
+  </header>
+  <div class="menu-container">
+    <p-menubar [model]="items"></p-menubar>
+  </div>
+  <h2>Ofrecemos al cliente 🎵</h2>
+
+  <div class="grid">
+    <div class="box">Asistencia 24/7</div>
+    <div class="box">Ofertas Especiales</div>
+    <div class="box">Atención Personalizada</div>
+  </div>
+
+  <br>
+
+  <div class="flex-center" style="height: 50px;">
+    <button class="click" routerLink="">
+      <i class="pi pi-arrow-left"></i> Volver
+    </button>
+    <button class="click" routerLink="/entregable-2">
+      <i class="pi pi-arrow-right"></i> Siguiente
+    </button>
+  </div>
+
+  <div class="flex-center" style="margin-top: 60px;">
+    <button class="click-2" routerLink="">
+      <i class="pi pi-warehouse" style="font-size: 1.5rem;"></i> Ver inventario
+    </button>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Privacidad</a>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div>Copyright © 2024 Soundfly: Escuchar música gratis online, All Rights Reserved</div>
+    <div class="flex-center" style="margin-top: 10px;">
+      <span style="color: #a300ff;">🌐</span>
+      <span style="color: #fbf5ff;">Español</span>
+    </div>
+  </footer>
+
+</body>
+</html>

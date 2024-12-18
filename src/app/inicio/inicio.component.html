@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Home</title>
+  <link rel="stylesheet" href="https://unpkg.com/primeng/resources/themes/lara-light-blue/theme.css">
+  <link rel="stylesheet" href="https://unpkg.com/primeng/resources/primeng.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/primeflex/primeflex.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    header {
+      position: relative;
+      background-color: #000000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -50%;
+      width: 200%;
+      height: 20px; 
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+      animation: slideLight 4s linear infinite;
+      z-index: 0;
+    }
+
+    header h1 {
+      position: relative;
+      font-size: 4rem; /* Título más grande */
+      z-index: 1;
+      animation: glowEffect 3s ease-in-out infinite;
+      text-shadow: 0 0 5px #b0bec5, 0 0 10px #90a4ae, 0 0 20px #90a4ae, 
+                   0 0 30px #78909c, 0 0 40px #78909c, 0 0 50px #607d8b;
+      font-family: 'Dancing Script', cursive; 
+      font-style: italic; 
+    }
+
+    @keyframes slideLight {
+      0% {
+          transform: translateX(-100%);
+      }
+      100% {
+          transform: translateX(100%);
+      }
+    }
+
+    @keyframes glowEffect {
+      0%, 100% {
+          text-shadow: 0 0 5px #b0bec5, 0 0 10px #90a4ae, 0 0 20px #90a4ae, 
+                       0 0 30px #78909c, 0 0 40px #78909c, 0 0 50px #607d8b;
+      }
+      50% {
+          text-shadow: 0 0 5px #cfd8dc, 0 0 10px #b0bec5, 0 0 20px #90a4ae, 
+                       0 0 30px #78909c, 0 0 40px #607d8b, 0 0 50px #546e7a;
+      }
+    }
+
+    .content {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .content p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #444;
+      text-align: justify;
+      letter-spacing: 0.5px;
+      font-style: italic; 
+    }
+
+    .grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .box {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      text-align: center;
+      border-radius: 15px;
+      padding: 50px;
+      font-weight: 700;
+      font-family: 'Cinzel', serif;
+      height: 350px;
+      width: 100%;
+      max-width: 450px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('https://images.pexels.com/photos/14241843/pexels-photo-14241843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    footer {
+      background-color: #1e1e1e;
+      color: #fff;
+      text-align: center;
+      padding: 40px 0;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+      font-style: italic; 
+    }
+
+    footer a:hover {
+      color: #a300ff;
+    }
+
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 20px;
+    }
+
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .click {
+      background-color: #a300ff;
+      border: none;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-family: 'Cinzel', serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: background-color 0.3s ease;
+      font-style: italic; 
+    }
+
+    .click:hover {
+      background-color: #8b00cc;
+    }
+
+    .click i {
+      margin-right: 8px;
+    }
+
+    .menu-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Bienvenidos a Music Home</h1>
+  </header>
+  
+  <div class="menu-container">
+    <p-menubar [model]="items"></p-menubar>
+  </div>
+  
+  <div class="content">
+    <p><strong>En Music Home</strong> llevamos la pasión por la música directamente a tus manos. Somos una tienda especializada en ofrecerte los mejores instrumentos musicales y accesorios, tanto para principiantes como para músicos profesionales.</p>
+    <p><strong>🎸 ¿Buscas una guitarra que se ajuste a tu estilo?</strong> 🎹 ¿Un teclado para componer tus propias melodías? 🥁 ¿O una batería para darle ritmo a tus días?</p>
+    <p><strong>¡Aquí lo encontrarás todo!</strong> Contamos con una amplia variedad de instrumentos de las marcas más reconocidas, asesoría personalizada y un espacio donde la calidad y el amor por la música se encuentran.</p>
+
+    <p>Dentro de este botón se encuentran de manera organizada los trabajos realizados:</p>
+
+    <div class="grid">
+      <div class="box">¡Explora nuestros productos!</div>
+    </div>
+
+    <div class="flex-center" style="margin-top: 40px;">
+      <button class="click" routerLink="/entregable">
+        <i class="pi pi-arrow-right"></i>Explorar más
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Privacidad</a>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div>Copyright © 2024 Soundfly: Escuchar música gratis online, All Rights Reserved</div>
+    <div class="flex-center" style="margin-top: 10px;">
+      <span style="color: #a300ff;">🌐</span>
+      <span style="color: #fbf5ff;">Español</span>
+    </div>
+  </footer>
+</body>
+</html>

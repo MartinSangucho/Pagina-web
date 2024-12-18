@@ -1,0 +1,155 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import 'primeflex/primeflex.scss';
+@import "primeicons/primeicons.css";
+@import 'primeng/resources/primeng.min.css';
+@import 'primeng/resources/themes/lara-light-indigo/theme.css';
+
+.box {
+  background-image: url('https://img.freepik.com/foto-gratis/paisaje-brumoso-bosque-cubierto-niebla-oscuras-nubes-tormenta_181624-25465.jpg'); 
+  background-size: cover;
+  background-position: center; 
+  border-radius: 11px; 
+  text-align: center;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 180px; 
+  color: white; 
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  }
+
+  .click {
+    background-color: #000000;
+    border: none; 
+    border-radius: 8px; 
+    font-size: 18px; 
+    padding: 12px 24px; 
+    color: white; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+    margin-right: 25px;
+  }
+
+  .click:hover {
+    background-color: #3e8bdd;
+    color: black;
+  }
+
+  .click:focus {
+    outline: none; 
+  }
+
+  .click:active {
+    background-color: #002349;
+  }
+
+  .click-1 {
+    background-color: #007bff; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: 18px; 
+    padding: 12px 24px; 
+    color: white; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+    margin-left: 2px;
+    margin-top: 12px;
+  }
+
+  .click-1:hover {
+    background-color: #3e8bdd;
+    color: black;
+  }
+
+  .click-1:focus {
+    outline: none; 
+  }
+
+  .click-1:active {
+    background-color: rgba(105, 102, 102, 0.301);
+  }
+
+  .click-2 {
+    background-color: #000000; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: 18px; 
+    padding: 12px 24px; 
+    color: white; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+    margin-left:1068px;
+    margin-top: 12px;
+  }
+
+  .click-2:hover {
+    background-color: #000000;
+    color: black;
+  }
+
+  .click-2:focus {
+    outline: none; 
+  }
+
+  .click-2:active {
+    background-color: rgba(105, 102, 102, 0.301);
+  }
+
+  .header {
+    position: relative;
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden; 
+  }
+  
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -50%;
+    width: 200%;
+    height: 20px; 
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    animation: slideLight 4s linear infinite;
+    z-index: 0;
+  }
+  
+  header h1 {
+    position: relative;
+    font-size: 2.5rem;
+    z-index: 1; 
+    animation: glowEffect 3s ease-in-out infinite;
+    text-shadow: 0 0 5px #b0bec5, 0 0 10px #90a4ae, 0 0 20px #90a4ae, 
+                 0 0 30px #78909c, 0 0 40px #78909c, 0 0 50px #607d8b;
+  }
+  
+  @keyframes slideLight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+  }
+  
+  @keyframes glowEffect {
+    0%, 100% {
+        text-shadow: 0 0 5px #b0bec5, 0 0 10px #90a4ae, 0 0 20px #90a4ae, 
+                     0 0 30px #78909c, 0 0 40px #78909c, 0 0 50px #607d8b;
+    }
+    50% {
+        text-shadow: 0 0 5px #cfd8dc, 0 0 10px #b0bec5, 0 0 20px #90a4ae, 
+                     0 0 30px #78909c, 0 0 40px #607d8b, 0 0 50px #546e7a;
+    }
+  }
+  
+  
